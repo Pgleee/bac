@@ -38,7 +38,7 @@ else{
       else{
         $req6 = "UPDATE OFFRE SET prixPropose = $prixPropose ";
         $res6 = mysqli_query($conn, $req6)or die("error");
-        echo("Mise å jour faite avec succés");
+        echo("Mise  jour faite avec succés");            
       }
    
 
