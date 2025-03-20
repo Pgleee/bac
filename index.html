@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajout d'enchère</title>    
+    <script src="Controle.js"></script>
+</head>
+<body>
+  <h1>Ajouter une vente aux enchères</h1>
+  <form action="Ajout.php" method="post" onsubmit="return validerForm();">
+    <label for="titre">Titre :</label>
+    <input type="text" name="titre" id="titre"><br><br>
+
+    <label for="description">Description :</label>
+    <textarea name="description" id="description"></textarea><br><br>
+
+    <label for="prix">Prix :</label>
+    <input type="text" name="prix" id="prix"><br><br>
+
+    <label for="date_debut">Date de début :</label>
+    <input type="date" name="date_debut" id="date_debut"><br><br>
+
+    <input type="submit" value="Ajouter">
+  </form>
+</body>
+</html>
