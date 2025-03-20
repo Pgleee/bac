@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 17, 2025 at 04:42 PM
+-- Generation Time: Mar 20, 2025 at 10:39 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bdvotrenumero`
+-- Database: `bdbac`
 --
 
 -- --------------------------------------------------------
@@ -30,18 +30,43 @@ SET time_zone = "+00:00";
 CREATE TABLE `article` (
   `code` int(11) NOT NULL,
   `libelle` varchar(30) NOT NULL,
-  `prixbase` int(11) NOT NULL
+  `prix base` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `article`
 --
 
-INSERT INTO `article` (`code`, `libelle`, `prixbase`) VALUES
+INSERT INTO `article` (`code`, `libelle`, `prix base`) VALUES
 (36, 'luth du hedi jouini', 525),
 (45, 'manuscrit de abu kacem chebi', 8520),
-(120, 'les gant des guadien', 453),
+(120, 'les gants de guardien attuga', 453),
 (212, 'voiture202bh', 25470);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `clien`
+--
+
+CREATE TABLE `clien` (
+  `cin` varchar(8) NOT NULL,
+  `nom` varchar(30) NOT NULL,
+  `prenom` varchar(30) NOT NULL,
+  `tel` varchar(8) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `offre`
+--
+
+CREATE TABLE `offre` (
+  `cin` varchar(8) NOT NULL,
+  `code` int(11) NOT NULL,
+  `prixpropose` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexes for dumped tables
@@ -52,6 +77,19 @@ INSERT INTO `article` (`code`, `libelle`, `prixbase`) VALUES
 --
 ALTER TABLE `article`
   ADD PRIMARY KEY (`code`);
+
+--
+-- Indexes for table `clien`
+--
+ALTER TABLE `clien`
+  ADD PRIMARY KEY (`cin`);
+
+--
+-- Indexes for table `offre`
+--
+ALTER TABLE `offre`
+  ADD KEY `cin` (`cin`),
+  ADD KEY `code` (`code`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
