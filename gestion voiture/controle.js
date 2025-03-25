@@ -33,4 +33,23 @@ function Verif() {
     
     return true;
   }
+
+
+  function espace(ch) {
+    if(ch.charAt(0)==" "){
+      ch = ch.substring(1,ch.length);
+    }
+    if(ch.charAt(ch.length - 1)==" "){
+      ch = ch.substring(0,ch.length - 2);
+    }
+    if(ch.indexOf("  ") != -1){
+      ch = ch.replace("  "," ");
+    }
+    if(ch.charAt(0)!=ch.charAt(0).toUpperCase()){
+      ch.charAt(0) = ch.charAt(0).toUpperCase();
+    }
+
+
+
+  }
  
