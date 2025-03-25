@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location d'un habit</title>
+    <link rel="stylesheet" href="mesStyles.css">
+    <script src="controles.js"></script>
+</head>
+<body>
+    <h2>Location d'un habit</h2>
+    <form  action="location.php" method="post">
+        <table>
+            <tr>
+                <td>Code habit</td>
+                <td><input type="number" name="codehabit" id="codehabit" ></td>
+            </tr>
+            <tr>
+                <td>CIN client</td>
+                <td><input type="text" name="cinclient" id="cinclient" ></td>
+            </tr>
+            <tr>
+                <td>Durée location </td>
+                <td><input type="number" name="duree" id="duree" ></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="reset">Annuler</button>
+                    <button type="button" onclick="verif2()">Enregistrer</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script src="controles.js"></script>
+</body>
+</html>

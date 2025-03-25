@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mesStyles.css">
+    <script src="controle.js"></script>
+
+</head>
+<body>
+    <h2>Ajout d'un habit</h2>
+    <form  action="ajout.php" method="post">
+        <table>
+            <tr>
+                <td>Catégorie</td>
+                <td>
+                    <select name="cate" id="cate">
+                        <option value="">Sélectionner une catégorie</option>
+                        <option value="1">Robe de soirée</option>
+                        <option value="2">Robe de mariée</option>
+                        <option value="3">Caftan</option>
+                        <option value="4">Costume</option>
+                        <option value="5">Jebba</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td><input type="text" name="des" id="des"></td>
+            </tr>
+            <tr>
+                <td>Taille</td>
+                <td>
+                    <input type="radio" name="taille" id="tailleS" value="S">
+                    <label for="tailleS">S</label>
+                    <input type="radio" name="taille" id="tailleM" value="M">
+                    <label for="tailleM">M</label>
+                    <input type="radio" name="taille" id="tailleL" value="L">
+                    <label for="tailleL">L</label>
+                    <input type="radio" name="taille" id="tailleXL" value="XL">
+                    <label for="tailleXL">XL</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Prix de location</td>
+                <td><input type="number" name="prix" id="prix"> DT</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="reset">Annuler</button>
+                    <button type="button" onclick="verifi()">Ajouter</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    
+    
+</body>
+</html>
