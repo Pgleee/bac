@@ -7,7 +7,7 @@ $genre = $_POST['genre'];
 $req =" SELECT * FROM membre WHERE `$email` = 'email' "; 
 $res = mysqli_query($conn, $req);
 if(mysqli_num_rows($res)==0){
-    echo('em deja ututliser')
+    echo('em deja ututliser');
 }
 else{
  

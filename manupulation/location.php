@@ -7,7 +7,7 @@ $dateLoc = date("Y-m-d");
 $req =" SELECT * FROM habit WHERE `$codehabit` = 'codehabit' "; 
 $res = mysqli_query($conn, $req);
 if(mysqli_num_rows($res)==0){
-    echo('Erreur : habit inexistant')
+    echo('Erreur : habit inexistant');
 }
 else{
     $req2 =" SELECT * FROM habit ,  WHERE `$codehabit` = 'codehabit' "; 
@@ -16,6 +16,6 @@ else{
 $req =" SELECT * FROM client WHERE `$cinclient` = 'cinclient' "; 
 $res = mysqli_query($conn, $req);
 if(mysqli_num_rows($res)==0){
-    echo('Erreur : client enextion')
+    echo('Erreur : client enextion');
 
 ?>

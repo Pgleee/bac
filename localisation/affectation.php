@@ -8,13 +8,13 @@ $jardinId = $_POST['jardinId'];
 $req =" SELECT * FROM membre WHERE `$mdp1` = 'mdp1' '$idMem'= 'idMem' "; 
 $res = mysqli_query($conn, $req);
 if(mysqli_num_rows($res)==0){
-    echo('Membre inexistant')
+    echo('Membre inexistant');
 }
 else
 {
-    $req2 "INSERT INTO affectations (numParcelle, jardinId, idMem, dateDeb) VALUES ($numParcelle, $jardinId, $idMem, '$dateDeb')";
+    $req2 = "INSERT INTO affectations (numParcelle, jardinId, idMem, dateDeb) VALUES ($numParcelle, $jardinId, $idMem, '$dateDeb')";
     $res2= mysqli_query($conn, $req);
-    echo('Affectation réussie')
+    echo('Affectation réussie');
 
 }
 ?>
