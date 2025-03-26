@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 25, 2025 at 09:53 PM
+-- Generation Time: Mar 26, 2025 at 10:44 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -53,9 +53,9 @@ CREATE TABLE `client` (
 CREATE TABLE `habit` (
   `codehab` int(20) NOT NULL,
   `description` varchar(100) NOT NULL,
-  `taille` varchar(50) NOT NULL,
+  `taille` char(1) NOT NULL,
   `prix` int(20) NOT NULL,
-  `disponible` varchar(50) NOT NULL,
+  `disponible` char(1) NOT NULL,
   `codecat` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -102,6 +102,16 @@ ALTER TABLE `location`
   ADD PRIMARY KEY (`dateloc`),
   ADD UNIQUE KEY `codehab` (`codehab`),
   ADD KEY `cin` (`cin`);
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `habit`
+--
+ALTER TABLE `habit`
+  ADD CONSTRAINT `habit_ibfk_1` FOREIGN KEY (`codecat`) REFERENCES `categorie` (`codecat`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

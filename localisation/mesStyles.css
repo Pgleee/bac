@@ -65,3 +65,12 @@ footer ul {
     list-style-type: square;
     font-style: italic;
 }
+
+#nom,#email,#mmdp1,#mdp2 {
+    color: #009933;          
+    background-color: #FFFFDB; 
+    padding: 4px;            
+   
+}
+
+

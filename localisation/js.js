@@ -4,7 +4,7 @@ function inscription() {
     var datenai = document.getElementById('dateNai').value;
     var genreMasculin = document.getElementById('masculin').checked;
     var genreFeminin = document.getElementById('feminin').checked;
-    var mdp1 = document.getElementById('mdp1').value;
+    var mdp1 = document.getElementById('mdp1').value.trim();
     var mdp2 = document.getElementById('mdp2').value;
 
 
@@ -16,7 +16,8 @@ function inscription() {
 
     
    
-    if (!emailRegex.test(email) || email.length > 50) {
+    if (!emailRegex.test(email) || email.length > 50 || (email.indexOf(" tn ") != -1 || ( email = email.substring(1,ch.length))))
+        {
         alert('L\'adresse email doit commencer par une lettre, se terminer par ".tn", et ne pas dépasser 50 caractères.');
         return false;
     }
@@ -34,7 +35,7 @@ function inscription() {
     }
 
  
-    if (mdp1.length < 6 ) {
+    if (mdp1.length =! 6 ) {
         alert('Le mot de passe doit contenir au moins 6 caractères sans espaces.');
         return false;
     }
