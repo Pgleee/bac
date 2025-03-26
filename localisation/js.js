@@ -1,11 +1,11 @@
 function inscription() {
-     var nom = document.getElementById('nom').value.trim();
-     var email = document.getElementById('email').value.);
+    var nom = document.getElementById('nom').value.trim();
+    var email = document.getElementById('email').value;
     var datenai = document.getElementById('dateNai').value;
     var genreMasculin = document.getElementById('masculin').checked;
     var genreFeminin = document.getElementById('feminin').checked;
-    var mdp1 = document.getElementById('mdp1').value();
-    var mdp2 = document.getElementById('mdp2').value.();
+    var mdp1 = document.getElementById('mdp1').value;
+    var mdp2 = document.getElementById('mdp2').value;
 
 
     
@@ -20,8 +20,6 @@ function inscription() {
         alert('L\'adresse email doit commencer par une lettre, se terminer par ".tn", et ne pas dépasser 50 caractères.');
         return false;
     }
-
-   
 
     
     if (year < 1950 || year > 2006) {
@@ -41,12 +39,19 @@ function inscription() {
         return false;
     }
 
-    if (mdp1 !==mdp2) {
+    if (mdp1 != mdp2) {
         alert('Les mots de passe ne correspondent pas.');
         return false;
     }
 
     
     
+}
+
+function choixParcelle(x){
+    if(x==1){
+        
+    }
+
 }
 
