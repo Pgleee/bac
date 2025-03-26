@@ -2,34 +2,35 @@ function Verif() {
     var nom=document.getElementById(nom).value;
     var email=document.getElementById(email).value;
     var dateNai=document.getElementById(dateNai).value;
-    var genre=document.getElementById(genre).select;
-    var mdp1=document.getElementById(mdp1).value.trim;
+    var masculin=document.getElementById(masculin).checked // to see later;
+    var feminin=document.getElementById(feminin).checked // to see later;
     var mdp1=document.getElementById(mdp1).value;
-    if(nom.lenght!=50 ||nom.charAt[0]==email.substr||nom.charAt[-1]==substr  ){
-        alert("")
+    var mdp1=document.getElementById(mdp1).value;
+    
+    if(nom.length>50 || alphabetic(nom.charAt(0)) == false || alphabetic(nom.charAt(nom.length) || nom.indexof(" ") == -1 ) ){
+        alert("nom invalid");
         return false;
     }
-    if(email.lenght!=50 || email.indexof("tn")==-1 || email.charAt[0]==substr  ){
-        alert("")
+    if(email.length>50 || email.indexof(".tn")==-1 || alphabetic(email.charAt(0)) == false ){
+        alert("email invalid");
         return false;
     }
-    if((dateNais>1950) || (dateNais<2006)){
-        alert("")
+    if((dateNai<1950) || (dateNai>2006)){
+        alert("date invalid");
         return false;
     }
-    if(genre.select)
-        {
-            alert("")
-            return false;
-        }
-    if(mdp1.lenght!=6){
-        alert("")
-            return false;
+    if(feminin==false && masculin==false){
+        alert("genre invalid");
+        return false;
+    }
+    if(mdp1.length!=6 || mdp1.indexof(" ") != -1){
+        alert("mot de passe invalid");
+        return false;
 
     }
     if(mdp2!=mdp1){
-        alert("")
-            return false;
+        alert(" les mots de passe ne sont pas identiques");
+        return false;
     }
 }
 
