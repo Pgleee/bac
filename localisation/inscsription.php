@@ -4,6 +4,8 @@ $nom = $_POST['nom'];
 $email = $_POST['email'];
 $dateNais = $_POST['dateNai'];
 $genre = $_POST['genre'];
+$datedeb = date("Y-m-d");
+
 $req =" SELECT * FROM membre WHERE `$email` = 'email' "; 
 $res = mysqli_query($conn, $req);
 if(mysqli_num_rows($res)==0){
