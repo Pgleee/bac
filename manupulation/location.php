@@ -1,5 +1,5 @@
 <?php
-mysqli_connect('localhost','root','','bdbac2')or die('erreur connection');
+mysqli_connect('localhost','root','','manipulation')or die('erreur connection');
 $codehabit = $_POST['codehabit'];
 $cinclient = $_POST['cinclient'];
 $duree = $_POST['duree'];
@@ -21,5 +21,5 @@ $res3 = mysqli_query($conn, $req);
 if(mysqli_num_rows($res)==n){
     echo('Erreur : client enextion');
 }
-
+}
 ?>
