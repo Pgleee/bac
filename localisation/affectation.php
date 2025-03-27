@@ -10,10 +10,19 @@ $res = mysqli_query($conn, $req);
 if(mysqli_num_rows($res)==0){
     echo('Membre inexistant');
 }
+else{
+    
+$req2 =" SELECT * FROM membre m,parcelle p, affectation WHERE  '$idMem'= 'idMem' and $numParcelle= numParcelle "; 
+$res2 = mysqli_query($conn, $req);
+if(mysqli_num_rows($res2)==1){
+    echo('Affectation existante');
+}
+    
+}
 else
 {
-    $req2 = "INSERT INTO affectations (numParcelle, jardinId, idMem, dateDeb) VALUES ($numParcelle, $jardinId, $idMem, '$dateDeb')";
-    $res2= mysqli_query($conn, $req);
+    $req3 = "INSERT INTO affectations (numParcelle, jardinId, idMem, dateDeb) VALUES ($numParcelle, $jardinId, $idMem, '$dateDeb')";
+    $res3= mysqli_query($conn, $req);
     echo('Affectation réussie');
 
 }

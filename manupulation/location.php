@@ -12,10 +12,13 @@ if(mysqli_num_rows($res)==0){
 else{
     $req2 =" SELECT * FROM habit ,  WHERE `$codehabit` = 'codehabit' "; 
     $res2= mysqli_query($conn, $req);
+    if(mysqli_num_rows($re2)==0){
+        echo('Erreur : client inexistant');
+
 }
-$req =" SELECT * FROM client WHERE `$cinclient` = 'cinclient' "; 
-$res = mysqli_query($conn, $req);
-if(mysqli_num_rows($res)==0){
+$req3=" SELECT * FROM client WHERE `$cinclient` = 'cinclient' "; 
+$res3 = mysqli_query($conn, $req);
+if(mysqli_num_rows($res)==n){
     echo('Erreur : client enextion');
 }
 

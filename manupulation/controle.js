@@ -32,14 +32,14 @@ function verif2() {
     var cinClient = document.getElementById('cinclient').value;
     var duree = document.getElementById('duree').value;
 
-    
+    b   
     if ( codeHabit < 1) {
         alert("Le code habit doit être un entier supérieur ou égal à 1.");
         return false;
     }
 
 
-    if (cinClient.length !== 8 || cinClient > 1 && cinClient <0|| cin.indexof(" ") != -1)  {
+    if (cinClient.length !== 8 || cinClient > 1 && cinClient <0|| cinClient.indexof(" ") != -1)  {
         alert("Le CIN client doit être une chaîne de 8 chiffres commençant par 0 ou 1.");
         return false;
     }
