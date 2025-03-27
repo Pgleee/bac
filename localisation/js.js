@@ -38,7 +38,33 @@ function alphabetic(){
     ch=ch.toUpperCase();
     for(i=0;i<ch.length;i++)
      {
-        if ((ch[i]>"Z")|| (ch[i]<"A"))
+        if ((ch[i]>"Z")||(ch[i]<"A")){
             return false;
+        }
      }
 }
+
+
+function choixParcelle(x){
+    document.getElementById("numPar").value = x.toString();
+
+    // ou 
+
+    /*
+    if(x==1){
+        document.getElementById("numPar").value="1";
+    }
+    if(x==2){
+        document.getElementById("numPar").value="2";
+    }
+    if(x==3){
+        document.getElementById("numPar").value="3";
+    }
+    if(x==4){
+        document.getElementById("numPar").value="4";
+    }*/
+    
+}
+
+
+
