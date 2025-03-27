@@ -2,7 +2,7 @@ function verifi() {
   
     var cate = document.getElementById('cate').value;
     var des = document.getElementById('des').value;
-    var taille = document.querySelector("taille").ariaChecked();
+    var taille = document.querySelector("taille").chekced;
     var prix = document.getElementById('prix').value;
 
     if (cate == "") {
@@ -14,7 +14,7 @@ function verifi() {
         return false;
     }
 
-    if (taille!="") {
+    if (taille==false) {
         alert("Veuillez sélectionner une taille.");
         return false;
     }
@@ -29,23 +29,23 @@ function verifi() {
 function verif2() {
     
     var codeHabit = document.getElementById('codehabit').value;
-    var cinClient = document.getElementById('cinclient').value.trim();
+    var cinClient = document.getElementById('cinclient').value;
     var duree = document.getElementById('duree').value;
 
     
-    if (codeHabit === "" || codeHabit < 1) {
+    if ( codeHabit < 1) {
         alert("Le code habit doit être un entier supérieur ou égal à 1.");
         return false;
     }
 
 
-    if (cinClient.length !== 8 || cinClient > 1 && cinClient <0)  {
+    if (cinClient.length !== 8 || cinClient > 1 && cinClient <0|| cin.indexof(" ") != -1)  {
         alert("Le CIN client doit être une chaîne de 8 chiffres commençant par 0 ou 1.");
         return false;
     }
 
 
-    if (duree === "" || duree< 1 || duree) > 4 {
+    if (duree == "" || duree< 1 || duree > 4 ){
         alert("La durée de location doit être un chiffre entre 1 et 4.");
         return false;
     }

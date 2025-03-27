@@ -34,3 +34,11 @@ function Verif() {
     }
 }
 
+function alphabetic(){
+    ch=ch.toUpperCase();
+    for(i=0;i<ch.length;i++)
+     {
+        if ((ch[i]>"Z")|| (ch[i]<"A"))
+            return false;
+     }
+}
