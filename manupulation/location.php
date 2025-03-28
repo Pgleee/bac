@@ -10,7 +10,7 @@ if(mysqli_num_rows($res)==0){
     echo('Erreur : habit inexistant');
 }
 else{
-     $req2 =" SELECT * FROM habit ,  WHERE `$codehabit` = 'codehabit' and $disponible=N"; 
+     $req2 =" SELECT * FROM habit ,  WHERE `$codehabit` = 'codehabit' and $disponible=N   "; 
      $res2= mysqli_query($conn, $req);
      $r=mysqli_fetch_row($res2);
      $disponible=$r[1];
@@ -26,7 +26,7 @@ else{
     else{
         $req4 = "INSERT INTO location ($codehabit, $cinclient, $duree, $dateLoc) VALUES (codehabit, cinclient, duree, 'dateLoc')";
         $res4 = mysqli_query($conn, $req4);
-        $req5="UPDATE habit SET' $disponible="N"' WHERE '$codehabit'= '$codehabit'"
+        $req5="UPDATE habit SET $disponible='N' WHERE '$codehabit'= '$codehabit'";
         $res5 = mysqli_query($conn, $req4);
         echo('Location effectuée avec succès ');
 

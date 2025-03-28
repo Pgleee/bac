@@ -1,5 +1,5 @@
 <?php
-mysqli_connect('localhost','root','','manupulation')or die('erreur connection');
+mysqli_connect('localhost','root','','manupulation')   or die   ('erreur connection')   ;
 $Cate = $_POST['Cate'];
 $taille = $_POST['taille'];
 $prix = $_POST['prix'];
