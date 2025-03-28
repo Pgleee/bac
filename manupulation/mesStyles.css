@@ -29,6 +29,7 @@ body {
 .zone2 a {
     text-decoration: none;
     color: #333;
+    display:inline-block;
 }
 
 .zone2 a:visited {
@@ -39,6 +40,7 @@ body {
     grid-area: zone3;
     padding: 20px;
     text-align: right; 
+    display:inline-block;
 }
 
 .zone3 iframe {
@@ -58,6 +60,10 @@ body {
 }
 
 #des, #prix {
+    color: blue;
+    border-color: blue;
+}
+#code,#cin,#duree{
     color: blue;
     border-color: blue;
 }
