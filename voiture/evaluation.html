@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="controle.js"></script>
+</head>
+<body>
+    <form action="evaluation.php">
+        <fieldset>
+            <legend>Evaluation d'un Modele :</legend>
+            <p>Npermis 
+            <input type="text" id="np" name="np">
+           <label for="">modele de test</label>
+            <select size="3" id="idmodelle">
+                <option value="choi">Choisir un modele</option>
+                <option value="wi">WALLIS IRIS</option>
+                <option value="ws">WALLIS 619</option>
+                <option value="wt">WALLIS 216</option>
+            </select></p>
+            <p>Note attribuees :
+                securite :<input type="number" id="sc"> Conduite :<input type="number" id="cn"> Confort :<input type="number" id="cf">
+            </p>
+            <p>Je ne suis pas un robot :
+                <input type="checkbox" id="ck" >
+            </p>
+            <input type="reset" value="Annuler">
+            <input type="submit" value="Valider" onclick="verif2()">
+        </fieldset>
+    </form>
+</body>
+</html>

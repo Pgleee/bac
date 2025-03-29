@@ -10,39 +10,40 @@
 <body>
 
 
-<form id="registrationForm" action="Inscription.php" method="post" onsubmit="return Verifi()">
-    <div class="form-group">
+<form  action="Inscription.php" method="post" onsubmit="return Verifi()">
+    <div >
         <label for="nom">Nom :</label>
         <input type="text" id="nom" name="nom" >
     </div>
     
-    <div class="form-group">
+    <div >
         <label for="prenom">Prénom :</label>
         <input type="text" id="pre" name="pre" >
     </div>
     
-    <div class="form-group">
+    <div >
         <label for="tel">Téléphone :</label>
         <input type="tel" id="tel" name="tel" >
     </div>
     
-    <div class="form-group">
+    <div >
         <label for="adresse">Adresse :</label>
         <textarea type="adresse" id="adr" name="adr" ></textarea>
     </div>
+    <hr>
     
-    <div class="form-group">
+    <div >
         <label for="password">Mot de passe :</label>
         <input type="password" id="psd" name="psd" >
     </div>
     
-    <div class="form-group">
+    <div >
         <label for="confirm_password">Confirmation du mot de passe :</label>
         <input type="password" id="cpsd" name="cpsd" >
         <div id="passwordError" class="error"></div>
     </div>
     
-    <div class="button-group">
+    <div >
         <button type="button" id="annuler">Annuler</button>
         <button type="submit" id="valider">Valider</button>
     </div>

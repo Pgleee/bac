@@ -9,7 +9,7 @@ function verif(){
         alert("nom talle minimale 3 ")
         return false;
    }
-   if(prenom.length < 3 || nom.alpha ){
+   if(prenom.length < 3 || prenom.alpha ){
     alert("nom talle minimale 3 ")
         return false;
     }
@@ -26,7 +26,7 @@ function verif(){
     }
     
   
-    if (password.length < 6 || psd.indexof(" ") != -1) {
+    if (psd.length < 6 || psd.indexof(" ") != -1) {
         alert("Le mot de passe doit contenir au moins 6 caractères sans espaces");
         return  false;
     }
@@ -67,7 +67,7 @@ if((q<1)||(q>5)|| isNaN(q) )
 
 
 
-if(password.length !== 6 || (p<1))
+if(tel.length !== 6 || (tel<1))
     {
     alert("Le champ telephone doit etre de 8 chiffres dont le premier est superieur a 1");
     
@@ -75,7 +75,7 @@ if(password.length !== 6 || (p<1))
 }
 
 
-if((mp.length!=6)||(mp.indexOf(' ')!=-1))
+if((pas.length!=6)||(pas.indexOf(' ')!=-1))
 {alert("Mot de passe sans espace de taille 6");
     return false;}
 
