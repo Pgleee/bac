@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commande de pizzas</title>
+    <script src="bibilio.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Commande de pizzas</h1>
+    <form action="Commande.php" method="post" onsubmit="return Verif2()">
+        <table>
+            <tr>
+                <td>Type de pizza :</td>
+                <td>
+                    <select name="p" id="p">
+                        <option value="">Choisir une Pizza</option>
+                        <option value="Fruits de mer">Fruits de mer</option>
+                        <option value="Margherita">Margherita</option>
+                        <option value="Napolitaine">Napolitaine</option>
+                        <option value="Neptune">Neptune</option>
+                        <option value="Royale">Royale</option>
+                    </select>
+                </td>
+                <td>Quantité :</td>
+                <td><input type="number" name="q" id="q"></td>
+            </tr>
+            <tr>
+                <td>Tél :</td>
+                <td ><input type="text" name="tel" id="tel"></td>
+            </tr>
+            <tr>
+                <td>Mot de passe :</td>
+                <td><input type="pas" name="pas" id="pas"></td>
+                <td><input type="submit" value="Commander"></td>
+                <td><input type="reset" value="Annuler"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
