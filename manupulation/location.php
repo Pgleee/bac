@@ -26,7 +26,7 @@ else{
         }
     
         else{
-            $req4 = "INSERT INTO location ($dateLoc , $codehabit , $cinclient , $duree ) VALUES (dateLoc  , codeHab , cin , duree)";
+            $req4 = "INSERT INTO location (dateLoc  , codeHab , cin , duree) VALUES ($dateLoc , $codehabit , $cinclient , $duree)" ;
             $res4 = mysqli_query($conn, $req4)or die('erreur insertion');
 
             $req5="UPDATE habit SET $disponible='N' WHERE '$codehabit'= '$codehabit'";

@@ -11,6 +11,9 @@
 
 
 <form  action="Inscription.php" method="post" onsubmit="return Verifi()">
+    <fieldset>
+        <legend>Inscription d'un client:</legend>
+
     <div >
         <label for="nom">Nom :</label>
         <input type="text" id="nom" name="nom" >
@@ -23,7 +26,7 @@
     
     <div >
         <label for="tel">Téléphone :</label>
-        <input type="tel" id="tel" name="tel" >
+        <input type="text" id="tel" name="tel" >
     </div>
     
     <div >
@@ -47,5 +50,6 @@
         <button type="button" id="annuler">Annuler</button>
         <button type="submit" id="valider">Valider</button>
     </div>
+</fieldset>
 </form>
 </body>
