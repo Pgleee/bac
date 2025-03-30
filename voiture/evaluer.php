@@ -4,7 +4,7 @@ $np = $_POST['np'];
 $idmodelle $_POST['idmodelle'];
 $sc $_POST['sc'];
 $ck $_POST['ck'];
-$dateloc=$_POST['y-m-d h:m:s']
+$dateloc=$_POST['y-m-d h:m:s'];
 $req =" SELECT * FROM testeur WHERE '$idmodelle' = 'idmodelle' "; 
 $res = mysqli_query($conn, $req);
 if(mysqli_num_rows($res)==0){

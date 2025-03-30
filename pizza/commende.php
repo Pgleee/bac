@@ -8,7 +8,7 @@ $pas= $_POST['pas'];
 
 $req1="SELECT* from client where $tel='tel' and $pas='pas";
 $res1=mysqli_query($con,$req1) ;
-if(mysqli_num_rows($res1)==0)
+if(mysqli_num_rows($res1)==0);
 {
 	echo("N tel et mot de passe erron !");
 }
