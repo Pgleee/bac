@@ -8,20 +8,24 @@ $adr= $_POST['adr'];
 $psd= $_POST['psd'];  
 $cpsd= $_POST['cpsd'];  
 $req1="SELECT* from client where $tel='tel'";
-$ret1=mysql_query($rq1) 
-if(mysql_num_rows($rt1)==0)
+$ret1=mysqli_query($con,$req1) ;
+if(mysqli_num_rows($rt1)==0)
 {
 	$rq2="INSERT into client values('$nom','$pre','$tel','$adr','$psd')";
-    $res2=mysql_query($con,$req2) 
-    	if($rt2){echo("inscription realise avec succs");}
+    $res2=mysqli_query($con,$req2) ;
+    if($rt2){
+		echo("inscription realise avec succs");
+	}
 
 }
 else 
 {
 	$req3="SELECT* from client where $tel='tel' ,$pre='pre',$nom='nom ";
-	$res3=mysql_query($con,$rq3) 
-	if(mysql_num_rows($res3)!=0)
-	{echo("client deja inscrit");}
+	$res3=mysqli_query($con,$rq3) ;
+	if(mysqli_num_rows($res3)!=0)
+	{
+		echo("client deja inscrit");
+	}
 }
 
 

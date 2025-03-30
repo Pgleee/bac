@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 28, 2025 at 02:26 PM
+-- Generation Time: Mar 30, 2025 at 01:12 AM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,7 +31,7 @@ CREATE TABLE `client` (
   `tel` varchar(8) NOT NULL,
   `nom` varchar(25) NOT NULL,
   `prenom` varchar(25) NOT NULL,
-  `addresse` varchar(100) NOT NULL,
+  `adresse` varchar(100) NOT NULL,
   `motpass` varchar(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -44,8 +44,8 @@ CREATE TABLE `client` (
 CREATE TABLE `commande` (
   `idpizza` varchar(3) NOT NULL,
   `tel` varchar(8) NOT NULL,
-  `datecmd` date NOT NULL,
-  `qtecmd` int(20) NOT NULL
+  `datecmd` datetime NOT NULL,
+  `qtecmd` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -56,8 +56,8 @@ CREATE TABLE `commande` (
 
 CREATE TABLE `pizza` (
   `idpizza` varchar(3) NOT NULL,
-  `nimpizza` varchar(30) NOT NULL,
-  `detail` varchar(200) NOT NULL,
+  `nompizza` varchar(30) NOT NULL,
+  `details` varchar(200) NOT NULL,
   `prix` decimal(6,3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -65,10 +65,10 @@ CREATE TABLE `pizza` (
 -- Dumping data for table `pizza`
 --
 
-INSERT INTO `pizza` (`idpizza`, `nimpizza`, `detail`, `prix`) VALUES
+INSERT INTO `pizza` (`idpizza`, `nompizza`, `details`, `prix`) VALUES
 ('Fmr', 'Fruits de mer', 'Tomate, Mozzarella, Fruits de mer ', 18.500),
 ('Mgh', 'Margherita ', ' Tomate, Mozzarella, Basilic 8', 8.000),
-('Nap', 'Napolitane', 'Tomate, Mozzarella, Thon, Anchois', 999.999),
+('Nap', 'Napolitane', 'Tomate, Mozzarella, Thon, Anchois', 12.000),
 ('Nep', 'neptune', 'Tomate, Mozzarella, Thon ', 10.500),
 ('Roy', 'royale', 'Tomate, Mozzarella, Jambon, Champignon', 14.500);
 
