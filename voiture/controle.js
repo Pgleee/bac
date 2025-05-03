@@ -18,27 +18,28 @@ function verif(){
     np=document.getElementById("np").value;
     nom=document.getElementById("no").value;
     prenom=document.getElementById("pre").value;
+    f=document.getElementById("fem").checked;
+    m=document.getElementById("mas").checked;
 
-    if((np.lenght!=8) || (np.substring(0,2) )|| (np.substring(3,8))) {
+    if((np.length!=8) || num(np.substring(0,2))|| num(np.substring(3,8)) || np.charAt(2)=="/"  /* ou  np.substring(2,3)=!"/" ou  np.substr(2,1)=!"/"  ou  np.indexOf("/")=! 2 */) {
         alert("erreur de N°permis");
         return false;
     }
 
-    if(alpha(nom) && nom.lenght<3 || nom.lenght>20){
+    if(alpha(nom) && (nom.length<3 || nom.length>20)){
         alert("erreur de nom");
         return false;
     }
-    if(alpha(pre) && pre.lenght<3 || pre.lenght>20){
+    if(alpha(pre) && (pre.length<3 || pre.length>20)){
         alert("erreur de prenom");
         return false;
     }
-
-
-    if(document.getElementById("fem").checked==false && document.getElementById(mas).checked==false){
+    if(f==false && m==false){
         alert("genre obligatoire");
         return false;
     }
 }
+
 
 function verif2(){
     np=document.getElementById("np").value;
@@ -46,10 +47,17 @@ function verif2(){
     con=document.getElementById("cn").value;
     cnf=document.getElementById("cf").value;
 
-    if((np.lenght!=8) || (num(np.substring(0,2)) )|| (num(np.substring(3,8)))|| (np[2]="/") ){
+    if((np.length!=8) || num(np.substring(0,2))|| num(np.substring(3,8)) || np.charAt(2)=="/"  /* ou  np.substring(2,3)=!"/" ou  np.substr(2,1)=!"/"  ou  np.indexOf("/")=! 2 */){ 
         alert("erreur de N°permis");
         return false;
     }
+
+    if(document.getElementById("modele").selectedInedex == 0){
+        alert("selection est obligatoire");
+        return false;
+    }
+    // selected index ta3tik nourou ell  champs elli selecteh
+
 
     if((sec)<1 || (sec)>5){
         alert("erreur securite");
@@ -64,15 +72,11 @@ function verif2(){
         return false;
     }
 
-    if(document.getElementById("ck").checked==false){
+    if(document.getElementById("ck").checked == false ){
         alert("case a cocher est obligatoire"); 
         return false;
     }
-    if(document.getElementById("wi").selectedInedex==false &&
-       document.getElementById("ws").selectedInedex==false &&
-       document.getElementById("wt").selectedInedex==false){
-        alert("selection est obligatoire");
-        return false;
-    }
+
+  
 
 }

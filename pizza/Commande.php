@@ -4,19 +4,18 @@ $p = $_POST['p'];
 $q = $_POST['q'];
 $tel = $_POST['tel'];
 $pas= $_POST['pas'];  
+$d = date("ymd : H:i:s");
 
-
-$req1="SELECT* from client where $tel='tel' and $pas='pas";
-$res1=mysqli_query($con,$req1) ;
-if(mysqli_num_rows($res1)==0);
+$req1 = "SELECT * from client where $tel='tel' and $pas='pas";
+$res1 = mysqli_query($con,$req1) ;
+if(mysqli_num_rows($res1)==0)
 {
 	echo("N tel et mot de passe erron !");
 }
 else{
-	$req2="INSERT into commande values('$q','$tel','$p')";
+	$req2=" INSERT into commande values('$p','$tel','$d','$q')";
 	$res2=mysqli_query($con,$req2) ;
 	echo("operation reussie");
-
 }
 
 ?>
