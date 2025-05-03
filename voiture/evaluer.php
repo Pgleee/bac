@@ -20,3 +20,4 @@ else{
     $res2=mysqli_query($con,$req2);
     echo("Evaluation enregistrée avec succès");}
 
+    ?>
