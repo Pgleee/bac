@@ -18,4 +18,4 @@ else{
 	echo("operation reussie");
 }
 
-?>
+?>$_POST

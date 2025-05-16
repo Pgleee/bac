@@ -7,7 +7,7 @@ function verif(){
     var op = document.getElementById('op').selectedindex;
     
     
-    if(cin.length != 3 || cin.chart[0]!=1 ||  cin.chart[0]!=0  ){
+    if(cin.length != 8 || cin.chart[0]!=1 ||  cin.chart[0]!=0  ){
         alert("il faut entrez votre nombre cin ");
         return false;
    }

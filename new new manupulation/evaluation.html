@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="java.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="evaluation.php" method="post">
+        <fieldset>
+            <legend>evaluationd'un cours</legend>
+            <div>
+                <label for="">cin</label>
+                <input type="text" name="cin2" id="cin2">
+            </div><br>
+            <div>
+                <label for="">cours:</label>
+                <select name="cours" id="cours">
+                    <option value="">choisirs u cours</option>
+                    <option value="">le language html</option>
+                    <option value="">la language javascript</option>
+                    <option value="">la manupilation d'une base de donne</option>
+                    <option value=""> structure de controles</option>
+                </select>
+            </div><br>
+            <div>
+                <label for="">note</label>
+                <input type="radio" name="note" id="note"value="1">1 <input type="radio" name="note" id="note" value="2">2 <input type="radio" name="note" id="note"value="3">3
+                 <input type="radio" name="note" id="note" value="4">4 <input type="radio" name="note" id="note" value="5">5
+            </div>
+            <div>
+                <input type="reset" value="annuler"> <input type="submit" value="valider" onclick="test2()">
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

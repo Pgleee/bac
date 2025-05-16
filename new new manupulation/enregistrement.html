@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js"></script>
+</head>
+<body>
+    <form action="enregistrement.php" method="post">
+        <fieldset>
+            <legend>Enregistrement d'un apprenant</legend>
+            <div>
+                <label for="">cin</label>
+                <input type="text" name="cin" id="cin">
+            </div><br>
+            <div>
+                <label for="">nom</label>
+                 <input type="text" name="nom" id="nom">
+            </div><br>
+              <div>
+                <label for="">prenom</label>
+                 <input type="text" name="prenom" id="prenom">
+            </div>
+            <div>
+                <label for="">mail</label>
+                <input type="text" name="mail" id="mail">
+            </div>
+            <div>
+                <input type="reset" value="annuler"> <input type="submit" value="enregistrer" onclick="verif()">
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
